@@ -24,15 +24,15 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Preload agressivo das imagens do carrossel para evitar delays -->
-    <link rel="preload" as="image" href="CONVSUL.PNG" fetchpriority="high">
-    <link rel="preload" as="image" href="SAOJOSE.PNG" fetchpriority="high">
-    <link rel="preload" as="image" href="SCSAUDE.PNG" fetchpriority="high">
+    <link rel="preload" as="image" href="CONVSUL.png" fetchpriority="high">
+    <link rel="preload" as="image" href="SAOJOSE.png" fetchpriority="high">
+    <link rel="preload" as="image" href="SCSAUDE.png" fetchpriority="high">
 
     <!-- Script para pré-carregar imagens do carrossel em cache e decodificar antecipadamente -->
     <script>
         // Pré-decodificar imagens para evitar delays de rendering
         async function preloadCarouselImages() {
-            const images = ['CONVSUL.PNG', 'SAOJOSE.PNG', 'SCSAUDE.PNG'];
+            const images = ['CONVSUL.png', 'SAOJOSE.png', 'SCSAUDE.png'];
             for (const src of images) {
                 const img = new Image();
                 img.src = src;
@@ -200,10 +200,10 @@
                     <!-- Peek Carousel Automático -->
                     <div class="peek-carousel">
                         <div class="carousel-track" id="carouselTrack">
-                            <img src="CONVSUL.PNG" alt="Convênio CONVSUL" decoding="async">
-                            <img src="SAOJOSE.PNG" alt="Parceria São José" decoding="async">
-                            <img src="SCSAUDE.PNG" alt="SC Saúde" decoding="async">
-                            <img src="CONVSUL.PNG" alt="Convênio CONVSUL" decoding="async">
+                            <img src="CONVSUL.png" alt="Convênio CONVSUL" decoding="async">
+                            <img src="SAOJOSE.png" alt="Parceria São José" decoding="async">
+                            <img src="SCSAUDE.png" alt="SC Saúde" decoding="async">
+                            <img src="CONVSUL.png" alt="Convênio CONVSUL" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -375,13 +375,13 @@
                     <h3 class="convênios-title">Convênios atendidos</h3>
                     <div class="convênios-grid">
                         <div class="convênio-card">
-                            <img src="CONVSUL.PNG" alt="Convênio CONVSUL" class="convênio-logo">
+                            <img src="CONVSUL.png" alt="Convênio CONVSUL" class="convênio-logo">
                         </div>
                         <div class="convênio-card">
-                            <img src="SAOJOSE.PNG" alt="Parceria São José" class="convênio-logo">
+                            <img src="SAOJOSE.png" alt="Parceria São José" class="convênio-logo">
                         </div>
                         <div class="convênio-card">
-                            <img src="SCSAUDE.PNG" alt="SC Saúde" class="convênio-logo">
+                            <img src="SCSAUDE.png" alt="SC Saúde" class="convênio-logo">
                         </div>
                     </div>
                 </div>
