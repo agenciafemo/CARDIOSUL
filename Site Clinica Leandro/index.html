@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SULCARDIO Clínica Cardiológica em Içara/SC. Agende sua consulta ou exame (Ecocardiograma, Holter, MAPA) com o Dr. Leandro Vieira de Souza.">
+    <meta name="keywords" content="Cardiologista, Clínica Cardiológica, Içara, SC, Ecocardiograma, Dr. Leandro Vieira de Souza, Consulta Cardiológica">
+    <title>SULCARDIO Clínica Cardiológica | Içara - SC</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Otimização de Fonte: Preload do stylesheet e swap (LCP / FOUT) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Otimização de Ícones: Preload e carregamento assíncrono para não bloquear renderização -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Arquivo CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preload agressivo das imagens do carrossel para evitar delays -->
+    <link rel="preload" as="image" href="CONVSUL.PNG" fetchpriority="high">
+    <link rel="preload" as="image" href="SAOJOSE.PNG" fetchpriority="high">
+    <link rel="preload" as="image" href="SCSAUDE.PNG" fetchpriority="high">
+
+    <!-- Script para pré-carregar imagens do carrossel em cache e decodificar antecipadamente -->
+    <script>
+        // Pré-decodificar imagens para evitar delays de rendering
+        async function preloadCarouselImages() {
+            const images = ['CONVSUL.PNG', 'SAOJOSE.PNG', 'SCSAUDE.PNG'];
+            for (const src of images) {
+                const img = new Image();
+                img.src = src;
+                // Força decodificação antecipada se disponível
+                if (img.decode) {
+                    try {
+                        await img.decode();
+                    } catch (e) {
+                        // Fallback se decode não for suportado
+                        continue;
+                    }
+                }
+            }
+        }
+
+        // Executar quando o DOM estiver pronto
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', preloadCarouselImages);
+        } else {
+            preloadCarouselImages();
+        }
+    </script>
+
+    <!-- Schema.org - Medical Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "SULCARDIO Clínica Cardiológica",
+      "url": "https://sulcardio.com.br",
+      "telephone": "+55 48 99912-2022",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centro",
+        "addressLocality": "Içara, SC",
+        "addressRegion": "SC",
+        "postalCode": "88810-000",
+        "addressCountry": "BR"
+      },
+      "image": "https://sulcardio.com.br/logo.png",
+      "description": "SULCARDIO Clínica Cardiológica em Içara/SC. Consultas e exames cardíacos especializados.",
+      "medicalSpecialty": "Cardiology",
+      "doctor": {
+        "@type": "Physician",
+        "name": "Dr. Leandro Vieira de Souza",
+        "medicalSpecialty": "Cardiologia",
+        "qualifications": [
+          "Residência em Clínica Médica - FURG (2007)",
+          "Residência em Cardiologia - Santa Casa de Porto Alegre, RS (2009)",
+          "Especialização em Ecocardiografia - Santa Casa de Porto Alegre, RS (2010)"
+        ]
+      },
+      "hasOfferingDescription": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Ecocardiograma",
+          "description": "Exame de ultrassom do coração"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Eletrocardiograma (ECG)",
+          "description": "Registro da atividade elétrica do coração"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "MAPA 24h",
+          "description": "Monitorização ambulatorial da pressão arterial"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Holter 24h",
+          "description": "Monitoramento do ritmo cardíaco"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Teste Ergométrico",
+          "description": "Avaliação do funcionamento cardiovascular durante o esforço físico"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "EcoDoppler de Carótidas",
+          "description": "Avaliação das artérias do pescoço para diagnosticar placas de gordura e risco de doenças vasculares"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+
+    <!-- Schema.org - FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vocês atendem planos de saúde?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, atendemos consultas particulares e alguns convênios. Entre em contato pelo WhatsApp para verificar a cobertura do seu plano específico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais exames eu posso fazer na clínica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Realizamos Ecocardiograma, Eletrocardiograma (ECG), EcoDoppler de Carótidas, MAPA 24h, Holter 24h e Teste Ergométrico. Todos no mesmo local."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Consigo fazer a consulta e os exames no mesmo dia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim! Dependendo da disponibilidade de agenda e do preparo exigido para o exame, você consegue resolver tudo na mesma visita."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Cabeçalho / Navbar -->
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="LOGOSULCARDIO.png" alt="Logo SULCARDIO" class="logo-img">
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="js-scroll nav-item">Início</a></li>
+                <li><a href="#servicos" class="js-scroll nav-item">Exames</a></li>
+                <li><a href="#nossa-equipe" class="js-scroll nav-item">Nossa Equipe</a></li>
+                <li><a href="#sobre" class="js-scroll nav-item">Sobre</a></li>
+                <li><a href="#medico" class="js-scroll nav-item">Médico</a></li>
+                <li><a href="#localizacao" class="js-scroll nav-item">Localização</a></li>
+            </ul>
+            <a href="https://wa.me/5548999122022?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20SULCARDIO." target="_blank" rel="noopener noreferrer" class="btn-nav-whatsapp" aria-label="Enviar mensagem no WhatsApp para agendamento"><i class="fab fa-whatsapp" aria-hidden="true"></i> Agendar Consulta</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Hero -->
+        <section id="hero" style="background-image: url('BANNERSULCARDIO.jpg'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">Cardiologia de excelência em Içara, SC</span>
+                    <h1>Seu coração, nossa missão.</h1>
+                    <p>Consulte-se com o Dr. Leandro Vieira de Souza, cardiologista com 15+ anos de experiência. Avaliação clínica completa, exames avançados e acompanhamento personalizado para sua saúde cardiovascular.</p>
+                    <div class="hero-buttons">
+                        <a href="#agendar" class="btn-whatsapp js-scroll" aria-label="Ir para a seção de agendamento no WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i> Agendar Consulta</a>
+                        <a href="#servicos" class="btn-outline js-scroll">Conhecer exames</a>
+                    </div>
+
+                    <!-- Peek Carousel Automático -->
+                    <div class="peek-carousel">
+                        <div class="carousel-track" id="carouselTrack">
+                            <img src="CONVSUL.PNG" alt="Convênio CONVSUL" decoding="async">
+                            <img src="SAOJOSE.PNG" alt="Parceria São José" decoding="async">
+                            <img src="SCSAUDE.PNG" alt="SC Saúde" decoding="async">
+                            <img src="CONVSUL.PNG" alt="Convênio CONVSUL" decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Exames Realizados na Clínica -->
+        <section id="servicos">
+            <h2 class="section-title">Exames realizados na clínica</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3><img src="eletrocardiograma.png" alt="Eletrocardiograma" class="icon-service-img"> Eletrocardiograma</h3>
+                    <p>Registro da atividade elétrica do coração para identificar arritmias e outras alterações cardiovasculares.</p>
+                    <div class="service-card-action">
+                        <a href="https://wa.me/5548999122022?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20exame%20de%20Eletrocardiograma." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais" aria-label="Saber mais sobre Eletrocardiograma via WhatsApp">
+                            Saiba mais
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3><img src="ecocardiograma.png" alt="Ecocardiograma" class="icon-service-img"> Ecocardiograma</h3>
+                    <p>Exame de ultrassom do coração que fornece imagens detalhadas da estrutura e do funcionamento do órgão.</p>
+                    <div class="service-card-action">
+                        <a href="https://wa.me/5548999122022?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20exame%20de%20Ecocardiograma." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais" aria-label="Saber mais sobre Ecocardiograma via WhatsApp">
+                            Saiba mais
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3><img src="ecodoppler.png" alt="EcoDoppler de Carótidas" class="icon-service-img"> EcoDoppler de Carótidas</h3>
+                    <p>Avaliação das artérias do pescoço para diagnosticar placas de gordura e risco de doenças vasculares.</p>
+                    <div class="service-card-action">
+                        <a href="https://wa.me/5548999122022?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20exame%20de%20EcoDoppler%20de%20Carótidas." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais" aria-label="Saber mais sobre EcoDoppler de Carótidas via WhatsApp">
+                            Saiba mais
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3><img src="holter.png" alt="Holter de 24h" class="icon-service-img"> Holter de 24h</h3>
+                    <p>Monitoramento contínuo do ritmo cardíaco por 24 horas para detectar arritmias ocultas no dia a dia.</p>
+                    <div class="service-card-action">
+                        <a href="https://wa.me/5548999122022?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20exame%20Holter%20de%2024h." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais" aria-label="Saber mais sobre Holter de 24h via WhatsApp">
+                            Saiba mais
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3><img src="pressao.png" alt="Monitorização ambulatorial da pressão arterial (MAPA)" class="icon-service-img"> Monitorização ambulatorial da pressão arterial (MAPA)</h3>
+                    <p>Acompanhamento da pressão arterial durante 24 horas para um diagnóstico preciso de hipertensão.</p>
+                    <div class="service-card-action">
+                        <a href="https://wa.me/5548999122022?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20exame%20MAPA." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais" aria-label="Saber mais sobre MAPA via WhatsApp">
+                            Saiba mais
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3><img src="ergometrico.png" alt="Teste ergométrico" class="icon-service-img"> Teste ergométrico</h3>
+                    <p>Avaliação do funcionamento cardiovascular durante o esforço físico em esteira.</p>
+                    <div class="service-card-action">
+                        <a href="https://wa.me/5548999122022?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Teste%20Ergométrico." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais" aria-label="Saber mais sobre Teste Ergométrico via WhatsApp">
+                            Saiba mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://wa.me/5548999122022?text=Olá! Gostaria de saber mais sobre os exames disponíveis na SULCARDIO." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" aria-label="Fale conosco pelo WhatsApp sobre os exames">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Fale conosco
+                </a>
+            </div>
+        </section>
+
+        <!-- 4.5 Nossa Equipe -->
+        <section id="nossa-equipe">
+            <h2 class="section-title">Nossa equipe</h2>
+            <p class="section-subtitle">Profissionais especializados e comprometidos com sua saúde cardiovascular.</p>
+
+            <div class="team-grid-container">
+                <div class="team-card-new">
+                    <img src="LEANDRO.JPG" alt="Foto do Dr. Leandro Vieira de Souza" class="team-card-image">
+                    <div class="team-card-content">
+                        <h3 class="team-card-name">Dr. Leandro Vieira de Souza</h3>
+                        <p class="team-card-specialty">Cardiologista</p>
+                        <p class="team-card-credentials">CRM-SC 15408 | RQE 13319</p>
+                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr. Leandro Vieira de Souza." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="team-card-new">
+                    <div class="team-card-placeholder" aria-label="Foto da profissional">
+                        <i class="fas fa-user-md" aria-hidden="true"></i>
+                    </div>
+                    <div class="team-card-content">
+                        <h3 class="team-card-name">Dra. Nome Sobrenome</h3>
+                        <p class="team-card-specialty">Clínica Geral</p>
+                        <p class="team-card-credentials">CRM-SC XXXXX | RQE XXXXX</p>
+                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com a Dra." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="team-card-new">
+                    <div class="team-card-placeholder" aria-label="Foto do profissional">
+                        <i class="fas fa-user-md" aria-hidden="true"></i>
+                    </div>
+                    <div class="team-card-content">
+                        <h3 class="team-card-name">Dr. Nome Sobrenome</h3>
+                        <p class="team-card-specialty">Cardiologista</p>
+                        <p class="team-card-credentials">CRM-SC XXXXX | RQE XXXXX</p>
+                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Sobre a Clínica -->
+        <section id="sobre">
+            <div class="sobre-container">
+                <!-- 1. Bloco Principal -->
+                <div class="sobre-main-grid">
+                    <div class="sobre-image-wrapper">
+                        <img src="CONSULTORIO.JPEG" alt="Consultório moderno da SULCARDIO Clínica Cardiológica" class="sobre-main-img" loading="lazy">
+                    </div>
+                    <div class="sobre-content">
+                        <h2 class="section-title left-align">Sobre a SulCardio</h2>
+                        <p class="sobre-text">Desde 2010, a Clínica SulCardio tem como missão oferecer um atendimento técnico, ético e humanizado para o cuidado com o coração dos seus pacientes. Com estrutura completa e equipamentos de última geração, a clínica proporciona diagnósticos precisos e tratamentos adequados para cada caso. Sob a coordenação do Dr. Leandro Vieira, cardiologista com mais de 15 anos de experiência, a SulCardio se consolidou como referência em saúde cardiovascular na região de Içara-SC.</p>
+
+                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de conhecer mais sobre a SULCARDIO Clínica Cardiológica." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="display: inline-block; margin-bottom: 32px; padding: 12px 24px; font-size: 1rem;" aria-label="Fale conosco pelo WhatsApp sobre a clínica">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Saiba mais
+                        </a>
+
+                        <!-- 2. Destaques (Mini-cards horizontais) -->
+                        <div class="sobre-features-grid">
+                            <div class="feature-mini-card">
+                                <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                                <span>Atendimento humanizado</span>
+                            </div>
+                            <div class="feature-mini-card">
+                                <i class="fas fa-hospital" aria-hidden="true"></i>
+                                <span>Estrutura completa</span>
+                            </div>
+                            <div class="feature-mini-card">
+                                <i class="fas fa-notes-medical" aria-hidden="true"></i>
+                                <span>Exames no local</span>
+                            </div>
+                            <div class="feature-mini-card">
+                                <i class="fas fa-user-md" aria-hidden="true"></i>
+                                <span>Ampla experiência</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Prova Social -->
+                <div class="sobre-stats-bar">
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="10" data-suffix=" mil">+0 mil</span>
+                        <span class="stat-text">Pacientes atendidos</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="15" data-suffix=" anos">+0 anos</span>
+                        <span class="stat-text">De experiência</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number" data-target="6" data-suffix="">0</span>
+                        <span class="stat-text">Exames realizados</span>
+                    </div>
+                </div>
+
+                <!-- 3. Convênios Atendidos -->
+                <div class="convênios-section">
+                    <h3 class="convênios-title">Convênios atendidos</h3>
+                    <div class="convênios-grid">
+                        <div class="convênio-card">
+                            <img src="CONVSUL.PNG" alt="Convênio CONVSUL" class="convênio-logo">
+                        </div>
+                        <div class="convênio-card">
+                            <img src="SAOJOSE.PNG" alt="Parceria São José" class="convênio-logo">
+                        </div>
+                        <div class="convênio-card">
+                            <img src="SCSAUDE.PNG" alt="SC Saúde" class="convênio-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elfsight Google Reviews -->
+                <div style="margin-top: 80px; padding-top: 80px; border-top: 1px solid rgba(115,29,44,0.1);">
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-9b70dd23-f9bf-4ed8-bdd2-f0bb11ddcf8d" data-elfsight-app-lazy></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. Sobre o Médico -->
+        <section id="medico">
+            <h2 class="medico-section-title">Médico responsável</h2>
+
+            <div class="medico-card">
+                <div class="medico-image">
+                    <img src="LEANDRO.jpg" alt="Dr. Leandro Vieira de Souza, Cardiologista">
+                </div>
+
+                <div class="medico-content">
+                    <span class="medico-badge">Cardiologista</span>
+
+                    <h3 class="medico-name">Dr. Leandro Vieira de Souza</h3>
+
+                    <p class="medico-specialty">Especialista em Cardiologia</p>
+
+                    <p class="medico-crm">CRM-SC 15408 · RQE 13319</p>
+
+                    <p class="medico-bio-short">O Dr. Leandro acredita que, para além de exames e diagnósticos, a Medicina é construída sobre confiança e empatia. Com uma trajetória de mais de 20 anos, ele dedica sua carreira ao cuidado cardiovascular, unindo excelência técnica e um atendimento profundamente humanizado.</p>
+
+                    <div class="medico-timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-year">2004</span>
+                            <span class="timeline-text">Graduação em Medicina — FURG</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2007</span>
+                            <span class="timeline-text">Residência em Clínica Médica — HU/FURG</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2009</span>
+                            <span class="timeline-text">Residência em Cardiologia — Santa Casa de Porto Alegre, RS</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2010</span>
+                            <span class="timeline-text">Especialização em Ecocardiografia — Santa Casa de Porto Alegre, RS</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2010</span>
+                            <span class="timeline-text">Fundação da Clínica SulCardio — Içara, SC</span>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5548999122022" target="_blank" rel="noopener noreferrer" class="btn-agendar-medico">
+                        <i class="fab fa-whatsapp"></i> Agendar com Dr. Leandro
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Localização -->
+        <section id="localizacao">
+            <h2 class="section-title">Onde estamos</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; align-items: center; margin-top: 60px; margin-bottom: 60px;">
+                <!-- Mapa -->
+                <div class="map-placeholder" style="height: 580px; margin: 0; max-width: 100%;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.089!2d-49.23647!3d-28.937045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c02a1b1b1b1b1b%3A0x1b1b1b1b1b1b1b!2sR.%20Vit%C3%B3ria%2C%20190%20-%20Centro%2C%20I%C3%A7ara%20-%20SC%2C%2088820-000!5e0!3m2!1spt-BR!2sbr!4v1682000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- Informações -->
+                <div>
+                    <div style="background: var(--white); padding: 32px; border-radius: 16px; box-shadow: var(--shadow-depth-2); margin-bottom: 20px; border-left: 4px solid #ccc;">
+                        <h4 style="color: #052752; font-size: 1.1rem; margin-bottom: 12px;"><i class="fas fa-map-marker-alt" style="color: #052752; margin-right: 12px;"></i>Endereço</h4>
+                        <p style="margin: 0; color: var(--text-light); line-height: 1.6;">R. Vitória, 190 - Sala 01, Centro, Içara - SC, 88820-000 Brasil</p>
+                    </div>
+
+                    <div style="background: var(--white); padding: 32px; border-radius: 16px; box-shadow: var(--shadow-depth-2); margin-bottom: 20px; border-left: 4px solid #ccc;">
+                        <h4 style="color: #052752; font-size: 1.1rem; margin-bottom: 8px;"><i class="fas fa-clock" style="color: #052752; margin-right: 12px;"></i>Horário de Atendimento</h4>
+                        <p style="margin: 0; color: var(--text-light);">Segunda a Sexta<br>08:00 - 18:00</p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, rgba(37,211,102,0.1) 0%, rgba(28,110,158,0.05) 100%); padding: 32px; border-radius: 16px; box-shadow: var(--shadow-depth-2); border: 1px solid rgba(37,211,102,0.2); position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #25D366 0%, var(--secondary-blue) 100%);"></div>
+                        <h4 style="color: var(--primary-blue); font-size: 1.15rem; margin-bottom: 24px; margin-top: 8px;"><i class="fas fa-headset" style="color: #25D366; margin-right: 12px;"></i>Entre em contato</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <a href="https://wa.me/5548999122022" target="_blank" rel="noopener noreferrer" style="background: var(--white); padding: 16px; border-radius: 12px; border: 1px solid rgba(37,211,102,0.2); text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.3s; text-align: center;">
+                                <i class="fab fa-whatsapp" style="color: #25D366; font-size: 1.5rem;"></i>
+                                <span style="color: var(--text-light); font-size: 0.85rem; font-weight: 500;">WhatsApp</span>
+                                <span style="color: var(--primary-blue); font-weight: 700; font-size: 0.95rem;">(48) 99912-2022</span>
+                            </a>
+                            <a href="tel:+554834436900" style="background: var(--white); padding: 16px; border-radius: 12px; border: 1px solid rgba(28,110,158,0.2); text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.3s; text-align: center;">
+                                <i class="fas fa-phone" style="color: var(--secondary-blue); font-size: 1.5rem;"></i>
+                                <span style="color: var(--text-light); font-size: 0.85rem; font-weight: 500;">Telefone</span>
+                                <span style="color: var(--primary-blue); font-weight: 700; font-size: 0.95rem;">(48) 3443-6900</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FAQ -->
+        <section id="faq">
+            <h2 class="section-title">Perguntas frequentes</h2>
+            <p class="section-subtitle">Tire suas dúvidas antes de agendar sua consulta.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">
+                        <h4>Vocês atendem planos de saúde?</h4>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
+                        <p>Sim, atendemos consultas particulares e alguns convênios. Entre em contato pelo WhatsApp para verificar a cobertura do seu plano específico.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
+                        <h4>Quais exames eu posso fazer na clínica?</h4>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2">
+                        <p>Realizamos Ecocardiograma, Eletrocardiograma (ECG), EcoDoppler de Carótidas, MAPA 24h, Holter 24h e Teste Ergométrico. Todos no mesmo local.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
+                        <h4>Consigo fazer a consulta e os exames no mesmo dia?</h4>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3">
+                        <p>Sim! Dependendo da disponibilidade de agenda e do preparo exigido para o exame, você consegue resolver tudo na mesma visita.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. CTA Final -->
+        <section id="cta-final">
+            <div class="cta-container">
+                <h2>Sua saúde não pode esperar.</h2>
+                <p>Agende sua consulta na SulCardio e receba uma avaliação cardiológica completa com diagnóstico preciso e orientações personalizadas.</p>
+
+                <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 32px; letter-spacing: 0.5px;">
+                    <i class="fas fa-check-circle" style="color: var(--accent-green); margin-right: 6px;"></i>
+                    +10 mil pacientes atendidos &bull; +15 anos de experiência
+                </p>
+
+                <a href="https://wa.me/5548999122022?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20SULCARDIO." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="agendar" aria-label="Iniciar conversa no WhatsApp para agendar sua consulta">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Agendar Agora pelo WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-grid">
+            <!-- Coluna 1: Logo e Descrição -->
+            <div class="footer-section">
+                <h4 style="font-size: 1.4rem; margin-bottom: 12px;">SUL<span style="color: var(--accent-light);">CARDIO</span></h4>
+                <p>Seu coração merece excelência. Medicina especializada em Içara/SC com tecnologia e cuidado humanizado.</p>
+            </div>
+
+            <!-- Coluna 2: Links Úteis -->
+            <div class="footer-section">
+                <h4>Links úteis</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#servicos">Exames</a></li>
+                    <li><a href="#medico">Médico</a></li>
+                    <li><a href="#faq">Perguntas frequentes</a></li>
+                    <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Contato -->
+            <div class="footer-section footer-contact">
+                <h4>Contato</h4>
+                <a href="https://wa.me/5548999122022" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+                </a>
+                <a href="tel:+5548999122022">
+                    <i class="fas fa-phone" aria-hidden="true"></i> +55 48 99912-2022
+                </a>
+                <a href="mailto:contato@sulcardio.com.br">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> contato@sulcardio.com.br
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="margin-bottom: 12px; font-size: 0.8rem;">Responsável técnico: Dr. Leandro Vieira de Souza | CRM-SC 15408 | RQE 13319</p>
+            <p>&copy; 2026 SULCARDIO Clínica Cardiológica. Todos os direitos reservados. Içara/SC.</p>
+            <p style="margin-top: 12px; font-size: 0.8rem;">Desenvolvido por <a href="https://femo.com.br/" target="_blank" rel="noopener noreferrer" style="color: var(--white); text-decoration: none; font-weight: 600; transition: opacity 0.3s;"><strong>//FEMO</strong></a></p>
+        </div>
+    </footer>
+
+    <!-- Modals dos Exames -->
+    <div id="modal-exame" class="modal-exame" role="dialog" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" aria-label="Fechar modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-details" id="modal-details"></div>
+                <div class="modal-buttons">
+                    <a href="#" class="btn-modal-whatsapp" id="modal-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Agendar pelo WhatsApp
+                    </a>
+                    <a href="tel:+554834436900" class="btn-modal-phone">
+                        <i class="fas fa-phone"></i> Agendar por Ligação
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5548999122022?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20SULCARDIO." target="_blank" rel="noopener noreferrer" class="float-wa" aria-label="Falar pelo WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Banner de Consentimento LGPD -->
+    <div id="cookie-banner" role="dialog" aria-labelledby="cookie-title">
+      <button id="cookie-close" class="cookie-close-btn" aria-label="Fechar">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+
+      <div class="cookie-content">
+        <h2 id="cookie-title">Sua privacidade importa</h2>
+        <p class="cookie-subtitle">Usamos cookies para melhorar sua experiência no site.</p>
+
+        <div class="cookie-buttons">
+          <button id="cookie-reject" class="btn-cookie btn-cookie-secondary">Rejeitar</button>
+          <button id="cookie-accept-all" class="btn-cookie btn-cookie-primary">Aceitar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arquivo JavaScript Externo -->
+    <script src="script.js"></script>
+</body>
+</html>

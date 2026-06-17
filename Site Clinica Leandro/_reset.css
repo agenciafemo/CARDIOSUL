@@ -1,0 +1,148 @@
+/* ========== RESET CSS ========== */
+/* 
+   Reset minimalista inspirado em Normalize.css + Modern Reset.
+   Objetivo: normalizar comportamento cross-browser sem opinião visual.
+   Nunca quebra fonte/cor/tamanho — apenas normaliza defaults.
+*/
+
+/* 1. Comportamento Global */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Resets Universais */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Body */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-default);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-brand-primary);
+}
+
+h1 { font-size: var(--font-size-5xl); }
+h2 { font-size: var(--font-size-4xl); }
+h3 { font-size: var(--font-size-3xl); }
+h4 { font-size: var(--font-size-2xl); }
+h5 { font-size: var(--font-size-xl); }
+h6 { font-size: var(--font-size-lg); }
+
+/* 5. Paragraphs */
+p {
+  margin-bottom: var(--space-4);
+}
+
+/* 6. Links */
+a {
+  color: var(--color-brand-secondary);
+  text-decoration: none;
+  transition: color var(--duration-base) var(--ease-standard);
+}
+
+a:hover {
+  color: var(--color-action-primary);
+}
+
+a:focus {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* 7. Listas */
+ul, ol {
+  margin-bottom: var(--space-4);
+  padding-left: var(--space-6);
+}
+
+li {
+  margin-bottom: var(--space-2);
+}
+
+/* 8. Imagens */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 9. Inputs / Form Elements */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* 10. Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 11. Código */
+code, pre {
+  font-family: 'Monaco', 'Courier New', monospace;
+  background-color: var(--color-surface-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+}
+
+pre {
+  overflow-x: auto;
+  padding: var(--space-4);
+}
+
+/* 12. Accessibility Utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  padding: var(--space-3) var(--space-4);
+  text-decoration: none;
+  z-index: var(--z-modal);
+}
+
+.skip-link:focus {
+  top: 0;
+}
