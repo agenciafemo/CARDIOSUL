@@ -24,15 +24,15 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Preload agressivo das imagens do carrossel para evitar delays -->
-    <link rel="preload" as="image" href="CONVSUL.png" fetchpriority="high">
-    <link rel="preload" as="image" href="SAOJOSE.png" fetchpriority="high">
-    <link rel="preload" as="image" href="SCSAUDE.png" fetchpriority="high">
+    <link rel="preload" as="image" href="CONVSUL.PNG" fetchpriority="high">
+    <link rel="preload" as="image" href="SAOJOSE.PNG" fetchpriority="high">
+    <link rel="preload" as="image" href="SCSAUDE.PNG" fetchpriority="high">
 
     <!-- Script para pré-carregar imagens do carrossel em cache e decodificar antecipadamente -->
     <script>
         // Pré-decodificar imagens para evitar delays de rendering
         async function preloadCarouselImages() {
-            const images = ['CONVSUL.png', 'SAOJOSE.png', 'SCSAUDE.png'];
+            const images = ['CONVSUL.PNG', 'SAOJOSE.PNG', 'SCSAUDE.PNG'];
             for (const src of images) {
                 const img = new Image();
                 img.src = src;
@@ -200,10 +200,10 @@
                     <!-- Peek Carousel Automático -->
                     <div class="peek-carousel">
                         <div class="carousel-track" id="carouselTrack">
-                            <img src="CONVSUL.png" alt="Convênio CONVSUL" decoding="async">
-                            <img src="SAOJOSE.png" alt="Parceria São José" decoding="async">
-                            <img src="SCSAUDE.png" alt="SC Saúde" decoding="async">
-                            <img src="CONVSUL.png" alt="Convênio CONVSUL" decoding="async">
+                            <img src="CONVSUL.PNG" alt="Convênio CONVSUL" decoding="async">
+                            <img src="SAOJOSE.PNG" alt="Parceria São José" decoding="async">
+                            <img src="SCSAUDE.PNG" alt="SC Saúde" decoding="async">
+                            <img src="CONVSUL.PNG" alt="Convênio CONVSUL" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -285,7 +285,7 @@
 
             <div class="team-grid-container">
                 <div class="team-card-new">
-                    <img src="LEANDRO.jpg" alt="Foto do Dr. Leandro Vieira de Souza" class="team-card-image">
+                    <img src="LEANDRO.JPG" alt="Foto do Dr. Leandro Vieira de Souza" class="team-card-image">
                     <div class="team-card-content">
                         <h3 class="team-card-name">Dr. Leandro Vieira de Souza</h3>
                         <p class="team-card-specialty">Cardiologista</p>
@@ -295,26 +295,22 @@
                 </div>
 
                 <div class="team-card-new">
-                    <div class="team-card-placeholder" aria-label="Foto da profissional">
-                        <i class="fas fa-user-md" aria-hidden="true"></i>
-                    </div>
+                    <img src="Matheus.png" alt="Foto do Dr. Matheus Heluany" class="team-card-image">
                     <div class="team-card-content">
-                        <h3 class="team-card-name">Dra. Nome Sobrenome</h3>
-                        <p class="team-card-specialty">Clínica Geral</p>
-                        <p class="team-card-credentials">CRM-SC XXXXX | RQE XXXXX</p>
-                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com a Dra." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
+                        <h3 class="team-card-name">Dr. Matheus Heluany</h3>
+                        <p class="team-card-specialty">Cirurgião Cardíaco</p>
+                        <p class="team-card-credentials">CRM-SC 20245 | RQE 20123</p>
+                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr. Matheus Heluany." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
                     </div>
                 </div>
 
                 <div class="team-card-new">
-                    <div class="team-card-placeholder" aria-label="Foto do profissional">
-                        <i class="fas fa-user-md" aria-hidden="true"></i>
-                    </div>
+                    <img src="Mathias.png" alt="Foto do Dr. Mathias Silvestre de Brida" class="team-card-image">
                     <div class="team-card-content">
-                        <h3 class="team-card-name">Dr. Nome Sobrenome</h3>
-                        <p class="team-card-specialty">Cardiologista</p>
-                        <p class="team-card-credentials">CRM-SC XXXXX | RQE XXXXX</p>
-                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
+                        <h3 class="team-card-name">Dr. Mathias Silvestre de Brida</h3>
+                        <p class="team-card-specialty">Cardiologista e Ecocardiografista</p>
+                        <p class="team-card-credentials">CRM-SC 24672 | RQE 22128 / 25368</p>
+                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr. Mathias Silvestre de Brida." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -326,7 +322,7 @@
                 <!-- 1. Bloco Principal -->
                 <div class="sobre-main-grid">
                     <div class="sobre-image-wrapper">
-                        <img src="CONSULTORIO.jpeg" alt="Consultório moderno da SULCARDIO Clínica Cardiológica" class="sobre-main-img" loading="lazy">
+                        <img src="CONSULTORIO.JPEG" alt="Consultório moderno da SULCARDIO Clínica Cardiológica" class="sobre-main-img" loading="lazy">
                     </div>
                     <div class="sobre-content">
                         <h2 class="section-title left-align">Sobre a SulCardio</h2>
@@ -379,13 +375,13 @@
                     <h3 class="convênios-title">Convênios atendidos</h3>
                     <div class="convênios-grid">
                         <div class="convênio-card">
-                            <img src="CONVSUL.png" alt="Convênio CONVSUL" class="convênio-logo">
+                            <img src="CONVSUL.PNG" alt="Convênio CONVSUL" class="convênio-logo">
                         </div>
                         <div class="convênio-card">
-                            <img src="SAOJOSE.png" alt="Parceria São José" class="convênio-logo">
+                            <img src="SAOJOSE.PNG" alt="Parceria São José" class="convênio-logo">
                         </div>
                         <div class="convênio-card">
-                            <img src="SCSAUDE.png" alt="SC Saúde" class="convênio-logo">
+                            <img src="SCSAUDE.PNG" alt="SC Saúde" class="convênio-logo">
                         </div>
                     </div>
                 </div>
