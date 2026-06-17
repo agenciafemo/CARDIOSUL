@@ -1,0 +1,52 @@
+/* ========== FORM COMPONENT ========== */
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-label {
+  display: block;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-default);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-base) var(--ease-standard);
+}
+
+.form-control::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-control:focus {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: -1px;
+  border-color: var(--color-focus-ring);
+}
+
+.form-control:disabled {
+  background-color: var(--color-surface-secondary);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: var(--color-feedback-error);
+}
+
+.form-error {
+  display: block;
+  color: var(--color-feedback-error);
+  font-size: var(--font-size-xs);
+  margin-top: var(--space-1);
+}
