@@ -1,0 +1,93 @@
+/* ========== CARD COMPONENT ========== */
+
+/* Base Card */
+.card {
+  background-color: var(--color-surface-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  transition: all var(--duration-base) var(--ease-standard);
+  border-left: 4px solid var(--color-brand-secondary);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Header */
+.card__header {
+  margin-bottom: var(--space-4);
+}
+
+.card__title {
+  font-size: var(--font-size-lg);
+  color: var(--color-brand-primary);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Card Icon */
+.card__icon {
+  color: var(--color-brand-secondary);
+  font-size: 1.4rem;
+  width: 24px;
+  text-align: center;
+}
+
+/* Card Body */
+.card__body {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  font-size: var(--font-size-sm);
+}
+
+/* Card Footer */
+.card__footer {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-default);
+}
+
+/* Service Card Specifics */
+.service-card {
+  background-color: var(--color-surface-default);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-brand-secondary);
+  transition: all var(--duration-base) var(--ease-standard);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-3);
+  color: var(--color-brand-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.service-card p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* Variant: Accent Border */
+.card--accent {
+  border-left-color: var(--color-action-primary);
+}
+
+/* Variant: Elevated */
+.card--elevated {
+  box-shadow: var(--shadow-lg);
+}
