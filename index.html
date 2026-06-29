@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="FAVICON.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SULCARDIO Clínica Cardiológica em Içara/SC. Agende sua consulta ou exame (Ecocardiograma, Holter, MAPA) com o Dr. Leandro Vieira de Souza.">
     <meta name="keywords" content="Cardiologista, Clínica Cardiológica, Içara, SC, Ecocardiograma, Dr. Leandro Vieira de Souza, Consulta Cardiológica">
@@ -117,12 +118,20 @@
           "description": "Avaliação das artérias do pescoço para diagnosticar placas de gordura e risco de doenças vasculares"
         }
       ],
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      }
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "13:00",
+          "closes": "18:00"
+        }
+      ]
     }
     </script>
 
@@ -191,7 +200,7 @@
                 <div class="hero-content">
                     <span class="hero-badge">Cardiologia de excelência em Içara, SC</span>
                     <h1>Seu coração, nossa missão.</h1>
-                    <p>Nossa equipe de cardiologistas experientes está aqui para cuidar de você. Oferecemos avaliação clínica completa, exames avançados e acompanhamento personalizado. Porque sua saúde do coração merece excelência e humanidade.</p>
+                    <p>Nossa equipe de cardiologistas experientes está aqui para cuidar de você. Oferecemos avaliação clínica completa, exames avançados e acompanhamento personalizado. Porque sua saúde cardiovascular merece um atendimento de excelência e humanizado.</p>
                     <div class="hero-buttons">
                         <a href="#agendar" class="btn-whatsapp js-scroll" aria-label="Ir para a seção de agendamento no WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i> Agendar Consulta</a>
                         <a href="#servicos" class="btn-outline js-scroll">Conhecer exames</a>
@@ -199,6 +208,7 @@
 
                     <!-- Peek Carousel Automático -->
                     <div class="peek-carousel">
+                        <p class="carousel-title">Convênios</p>
                         <div class="carousel-track" id="carouselTrack">
                             <img src="CONVSUL.png" alt="Convênio CONVSUL" decoding="async">
                             <img src="SAOJOSE.png" alt="Parceria São José" decoding="async">
@@ -217,7 +227,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <h3><img src="eletrocardiograma.png" alt="Eletrocardiograma" class="icon-service-img"> Eletrocardiograma</h3>
-                    <p>Registro da atividade elétrica do coração para identificar arritmias e outras alterações cardiovasculares.</p>
+                    <p>Registro da atividade elétrica do coração para identificar arritmias, sobrecargas, isquemia ou infarto, além de outras alterações cardiovasculares.</p>
                     <div class="service-card-action">
                         <a href="https://wa.me/5548999122022?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20exame%20de%20Eletrocardiograma." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais" aria-label="Saber mais sobre Eletrocardiograma via WhatsApp">
                             Saiba mais
@@ -261,7 +271,7 @@
                     </div>
                 </div>
                 <div class="service-card">
-                    <h3><img src="ergometrico.png" alt="Teste ergométrico" class="icon-service-img"> Teste ergométrico</h3>
+                    <h3><img src="ESTEIRA.png" alt="Teste ergométrico" class="icon-service-img"> Teste ergométrico</h3>
                     <p>Avaliação do funcionamento cardiovascular durante o esforço físico em esteira.</p>
                     <div class="service-card-action">
                         <a href="https://wa.me/5548999122022?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Teste%20Ergométrico." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais" aria-label="Saber mais sobre Teste Ergométrico via WhatsApp">
@@ -309,7 +319,7 @@
                     <div class="team-card-content">
                         <h3 class="team-card-name">Dr. Mathias Silvestre de Brida</h3>
                         <p class="team-card-specialty">Cardiologista e Ecocardiografista</p>
-                        <p class="team-card-credentials">CRM-SC 24672 | RQE 22128 / 25368</p>
+                        <p class="team-card-credentials">CRM-SC 24672 | RQE 22128 | 25368</p>
                         <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr. Mathias Silvestre de Brida." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
                     </div>
                 </div>
@@ -365,7 +375,7 @@
                         <span class="stat-text">De experiência</span>
                     </div>
                     <div class="stat-box">
-                        <span class="stat-number" data-target="6" data-suffix="">0</span>
+                        <span class="stat-number" data-target="50" data-suffix=" mil">+0 mil</span>
                         <span class="stat-text">Exames realizados</span>
                     </div>
                 </div>
@@ -397,7 +407,7 @@
 
         <!-- 6. Sobre o Médico -->
         <section id="medico">
-            <h2 class="medico-section-title">Médico responsável</h2>
+            <h2 class="medico-section-title">Médico Responsável</h2>
 
             <div class="medico-card">
                 <div class="medico-image">
@@ -409,7 +419,7 @@
 
                     <h3 class="medico-name">Dr. Leandro Vieira de Souza</h3>
 
-                    <p class="medico-specialty">Especialista em Cardiologia</p>
+                    <p class="medico-specialty">Médico Cardiologista</p>
 
                     <p class="medico-crm">CRM-SC 15408 · RQE 13319</p>
 
@@ -429,12 +439,20 @@
                             <span class="timeline-text">Residência em Cardiologia — Santa Casa de Porto Alegre, RS</span>
                         </div>
                         <div class="timeline-item">
+                            <span class="timeline-year">2009</span>
+                            <span class="timeline-text">Título de Especialista em Cardiologia pela Sociedade Brasileira de Cardiologia</span>
+                        </div>
+                        <div class="timeline-item">
                             <span class="timeline-year">2010</span>
                             <span class="timeline-text">Especialização em Ecocardiografia — Santa Casa de Porto Alegre, RS</span>
                         </div>
                         <div class="timeline-item">
                             <span class="timeline-year">2010</span>
                             <span class="timeline-text">Fundação da Clínica SulCardio — Içara, SC</span>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-year">2015</span>
+                            <span class="timeline-text">Título de Especialista em Ergometria pela Sociedade Brasileira de Cardiologia</span>
                         </div>
                     </div>
 
@@ -464,7 +482,7 @@
 
                     <div style="background: var(--white); padding: 32px; border-radius: 16px; box-shadow: var(--shadow-depth-2); margin-bottom: 20px; border-left: 4px solid #ccc;">
                         <h4 style="color: #052752; font-size: 1.1rem; margin-bottom: 8px;"><i class="fas fa-clock" style="color: #052752; margin-right: 12px;"></i>Horário de Atendimento</h4>
-                        <p style="margin: 0; color: var(--text-light);">Segunda a Sexta<br>08:00 - 18:00</p>
+                        <p style="margin: 0; color: var(--text-light);">Segunda a Sexta<br>08:00 - 12:00h<br>13:00 - 18:00h</p>
                     </div>
 
                     <div style="background: linear-gradient(135deg, rgba(37,211,102,0.1) 0%, rgba(28,110,158,0.05) 100%); padding: 32px; border-radius: 16px; box-shadow: var(--shadow-depth-2); border: 1px solid rgba(37,211,102,0.2); position: relative; overflow: hidden;">
@@ -531,7 +549,7 @@
 
                 <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; margin-bottom: 32px; letter-spacing: 0.5px;">
                     <i class="fas fa-check-circle" style="color: var(--accent-green); margin-right: 6px;"></i>
-                    +10 mil pacientes atendidos &bull; +15 anos de experiência
+                    +10 mil pacientes atendidos &bull; +15 anos de experiência &bull; +50 mil exames realizados
                 </p>
 
                 <a href="https://wa.me/5548999122022?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20SULCARDIO." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="agendar" aria-label="Iniciar conversa no WhatsApp para agendar sua consulta">
