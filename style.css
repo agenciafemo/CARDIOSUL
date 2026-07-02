@@ -1077,9 +1077,24 @@ footer::before {
 }
 
 .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+    }
 }
 
 /* Botão Flutuante WhatsApp */
