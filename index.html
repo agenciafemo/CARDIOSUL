@@ -300,7 +300,7 @@
                         <h3 class="team-card-name">Dr. Leandro Vieira</h3>
                         <p class="team-card-specialty">Cardiologista</p>
                         <p class="team-card-credentials">CRM-SC 15408 | RQE 13319</p>
-                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr. Leandro Vieira." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
+                        <button type="button" class="btn-saiba-mais-team" data-doctor="leandro">Saiba mais</button>
                     </div>
                 </div>
 
@@ -310,7 +310,7 @@
                         <h3 class="team-card-name">Dr. Matheus Heluany</h3>
                         <p class="team-card-specialty">Cirurgião Cardíaco</p>
                         <p class="team-card-credentials">CRM-SC 20245 | RQE 20123</p>
-                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr. Matheus Heluany." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
+                        <button type="button" class="btn-saiba-mais-team" data-doctor="matheus">Saiba mais</button>
                     </div>
                 </div>
 
@@ -320,7 +320,7 @@
                         <h3 class="team-card-name">Dr. Mathias Silvestre de Brida</h3>
                         <p class="team-card-specialty">Cardiologista e Ecocardiografista</p>
                         <p class="team-card-credentials">CRM-SC 24672 | RQE 22128 | 25368</p>
-                        <a href="https://wa.me/5548999122022?text=Olá! Gostaria de agendar um exame com o Dr. Mathias Silvestre de Brida." target="_blank" rel="noopener noreferrer" class="btn-saiba-mais-team">Saiba mais</a>
+                        <button type="button" class="btn-saiba-mais-team" data-doctor="mathias">Saiba mais</button>
                     </div>
                 </div>
             </div>
@@ -621,6 +621,32 @@
                     </a>
                     <a href="tel:+554834436900" class="btn-modal-phone">
                         <i class="fas fa-phone"></i> Agendar por Ligação
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal do Corpo Clínico -->
+    <div id="modal-medico" class="modal-exame" role="dialog" aria-hidden="true" aria-modal="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-medico-content">
+            <button class="modal-close" aria-label="Fechar modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-medico-body">
+                <div class="modal-medico-photo-col">
+                    <img id="modal-medico-photo" src="" alt="">
+                </div>
+                <div class="medico-content modal-medico-info-col">
+                    <span class="medico-badge" id="modal-medico-badge"></span>
+                    <h3 class="medico-name" id="modal-medico-name"></h3>
+                    <p class="medico-specialty" id="modal-medico-specialty"></p>
+                    <p class="medico-crm" id="modal-medico-crm"></p>
+                    <p class="medico-bio-short" id="modal-medico-bio"></p>
+                    <div class="medico-timeline" id="modal-medico-timeline"></div>
+                    <a href="#" class="btn-agendar-medico" id="modal-medico-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Agendar Consulta
                     </a>
                 </div>
             </div>

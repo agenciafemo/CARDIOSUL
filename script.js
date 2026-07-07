@@ -178,8 +178,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- MODAL DE EXAMES ---
     const modalExame = document.getElementById('modal-exame');
-    const modalClose = document.querySelector('.modal-close');
-    const modalOverlay = document.querySelector('.modal-overlay');
+    const modalClose = modalExame.querySelector('.modal-close');
+    const modalOverlay = modalExame.querySelector('.modal-overlay');
 
     // Mapeamento de imagens para cada exame
     const imagemMap = {
@@ -285,6 +285,120 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modalExame.classList.contains('active')) {
             fecharModal();
+        }
+    });
+
+    // --- MODAL DO CORPO CLÍNICO ---
+    const modalMedico = document.getElementById('modal-medico');
+    const modalMedicoClose = modalMedico.querySelector('.modal-close');
+    const modalMedicoOverlay = modalMedico.querySelector('.modal-overlay');
+
+    const medicosDetalhes = {
+        'leandro': {
+            foto: 'LEANDROMED.png',
+            fotoPosicao: 'center 25%',
+            badge: 'Cardiologista',
+            nome: 'Dr. Leandro Vieira',
+            especialidade: 'Médico Cardiologista',
+            crm: 'CRM-SC 15408 · RQE 13319',
+            bio: 'O Dr. Leandro acredita que, para além de exames e diagnósticos, a Medicina é construída sobre confiança e empatia. Com uma trajetória de mais de 20 anos, ele dedica sua carreira ao cuidado cardiovascular, unindo excelência técnica e um atendimento profundamente humanizado.',
+            timeline: [
+                { ano: '2004', texto: 'Graduação em Medicina — FURG, Rio Grande, RS' },
+                { ano: '2007', texto: 'Residência em Clínica Médica — HU/FURG, Rio Grande, RS' },
+                { ano: '2009', texto: 'Residência em Cardiologia — Santa Casa de Porto Alegre, RS' },
+                { ano: '2009', texto: 'Título de Especialista em Cardiologia pela Sociedade Brasileira de Cardiologia' },
+                { ano: '2010', texto: 'Especialização em Ecocardiografia — Santa Casa de Porto Alegre, RS' },
+                { ano: '2010', texto: 'Fundação da Clínica SulCardio — Içara, SC' },
+                { ano: '2015', texto: 'Título de Especialista em Ergometria pela Sociedade Brasileira de Cardiologia' }
+            ],
+            whatsapp: 'https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr. Leandro Vieira.'
+        },
+        'matheus': {
+            foto: 'Matheus.png',
+            fotoPosicao: 'center 30%',
+            badge: 'Cirurgião Cardíaco',
+            nome: 'Dr. Matheus Heluany',
+            especialidade: 'Cirurgião Cardíaco',
+            crm: 'CRM-SC 20245 · RQE 20123',
+            bio: '',
+            timeline: [
+                { ano: '2013', texto: 'Graduação em Medicina — UNESC, Criciúma, SC' },
+                { ano: '2021', texto: 'Residência em Cirurgia Cardíaca — Instituto de Cardiologia do Rio Grande do Sul (IC/FUC), Porto Alegre, RS' },
+                { ano: '2023', texto: 'Fellowship em Fibrilação Atrial — Itália' },
+                { ano: '2024', texto: 'Pós-graduação em Cirurgia Minimamente Invasiva' },
+                { ano: '2025', texto: 'Fellowship em Fibrilação Atrial — EUA' },
+                { ano: 'Atual', texto: 'Professor universitário do curso de Medicina — UNESC, Criciúma, SC' }
+            ],
+            whatsapp: 'https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr. Matheus Heluany.'
+        },
+        'mathias': {
+            foto: 'Mathias.png',
+            fotoPosicao: 'center 22%',
+            badge: 'Cardiologista e Ecocardiografista',
+            nome: 'Dr. Mathias Silvestre de Brida',
+            especialidade: 'Cardiologista e Ecocardiografista',
+            crm: 'CRM-SC 24672 · RQE 22128 / 25368',
+            bio: '',
+            timeline: [
+                { ano: '2017', texto: 'Graduação em Medicina — UNESC, Criciúma, SC' },
+                { ano: '2020', texto: 'Residência em Medicina Interna — Hospital Nossa Senhora da Conceição (GHC), Porto Alegre, RS' },
+                { ano: '2022', texto: 'Residência em Cardiologia — Instituto de Cardiologia do Rio Grande do Sul (IC/FUC), Porto Alegre, RS' },
+                { ano: '2022', texto: 'Título de Especialista em Cardiologia pela Sociedade Brasileira de Cardiologia' },
+                { ano: '2024', texto: 'Residência em Ecocardiografia — Instituto de Cardiologia do Rio Grande do Sul (IC/FUC), Porto Alegre, RS' },
+                { ano: '2024', texto: 'Título de Especialista em Ecocardiografia pela Sociedade Brasileira de Cardiologia' }
+            ],
+            whatsapp: 'https://wa.me/5548999122022?text=Olá! Gostaria de agendar uma consulta com o Dr. Mathias Silvestre de Brida.'
+        }
+    };
+
+    function abrirModalMedico(medicoKey) {
+        const medico = medicosDetalhes[medicoKey];
+        if (!medico) return;
+
+        const foto = document.getElementById('modal-medico-photo');
+        foto.src = medico.foto;
+        foto.alt = 'Foto do ' + medico.nome;
+        foto.style.objectPosition = medico.fotoPosicao || 'center';
+
+        document.getElementById('modal-medico-badge').textContent = medico.badge;
+        document.getElementById('modal-medico-name').textContent = medico.nome;
+        document.getElementById('modal-medico-specialty').textContent = medico.especialidade;
+        document.getElementById('modal-medico-crm').textContent = medico.crm;
+
+        const bioEl = document.getElementById('modal-medico-bio');
+        bioEl.textContent = medico.bio;
+        bioEl.style.display = medico.bio ? 'block' : 'none';
+
+        const timelineEl = document.getElementById('modal-medico-timeline');
+        timelineEl.innerHTML = medico.timeline.map(item =>
+            `<div class="timeline-item"><span class="timeline-year">${item.ano}</span><span class="timeline-text">${item.texto}</span></div>`
+        ).join('');
+
+        document.getElementById('modal-medico-btn-whatsapp').href = medico.whatsapp;
+
+        modalMedico.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function fecharModalMedico() {
+        modalMedico.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    document.querySelectorAll('.btn-saiba-mais-team').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const medicoKey = btn.getAttribute('data-doctor');
+            if (medicoKey) abrirModalMedico(medicoKey);
+        });
+    });
+
+    modalMedicoClose.addEventListener('click', fecharModalMedico);
+    modalMedicoOverlay.addEventListener('click', fecharModalMedico);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalMedico.classList.contains('active')) {
+            fecharModalMedico();
         }
     });
 
