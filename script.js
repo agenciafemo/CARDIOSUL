@@ -140,10 +140,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnAcceptSelected = document.getElementById('cookie-accept-selected');
     const btnAcceptAll = document.getElementById('cookie-accept-all');
 
+    // Atualiza o Google Consent Mode conforme a escolha do usuário no banner
+    const updateGoogleConsent = (consentData) => {
+        if (typeof gtag !== 'function') return;
+        gtag('consent', 'update', {
+            'analytics_storage': consentData.analytics ? 'granted' : 'denied',
+            'ad_storage': consentData.marketing ? 'granted' : 'denied',
+            'ad_user_data': consentData.marketing ? 'granted' : 'denied',
+            'ad_personalization': consentData.marketing ? 'granted' : 'denied'
+        });
+    };
+
     if (cookieBanner) {
         // 1. Verifica se já aceitou antes (garante que não apareça de novo)
-        if (localStorage.getItem('cookieConsent')) {
+        const storedConsent = localStorage.getItem('cookieConsent');
+        if (storedConsent) {
             cookieBanner.style.display = 'none';
+            updateGoogleConsent(JSON.parse(storedConsent));
         }
 
         // 2. Função segura para fechar e remover da tela
@@ -155,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // 3. Função que salva a escolha e fecha
         const saveAndClose = (consentData) => {
             localStorage.setItem('cookieConsent', JSON.stringify(consentData));
+            updateGoogleConsent(consentData);
             closeBanner();
         };
 
