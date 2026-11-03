@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "clinica-cardiosul.vercel.app" }],
+      "destination": "https://www.sulcardio.com.br/$1",
+      "permanent": true
+    }
+  ]
+}
