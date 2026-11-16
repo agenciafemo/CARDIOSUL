@@ -1149,6 +1149,11 @@ footer::before {
     #servicos { padding: 60px 5%; }
 
         /* Navbar Mobile */
+        .navbar { padding: 0 16px; gap: 10px; }
+        .logo { padding: 12px 0; }
+        .logo-img { height: 48px; }
+        .btn-nav-whatsapp { font-size: 0.8rem; padding: 8px 12px; }
+        .btn-nav-whatsapp i { margin-right: 6px; }
         .hamburger { display: block; }
         .nav-links {
             position: absolute;
@@ -1689,6 +1694,12 @@ footer::before {
   margin-top: 18px;
   padding: 11px 24px;
   font-size: 0.9rem;
+}
+
+@media (max-width: 380px) {
+    .navbar { padding: 0 12px; gap: 8px; }
+    .logo-img { height: 42px; }
+    .btn-nav-whatsapp { font-size: 0.75rem; padding: 8px 10px; }
 }
 
 @media (max-width: 480px) {
